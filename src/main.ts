@@ -47,7 +47,7 @@ function sync() {
   linkBox.hidden = true;
   status.textContent = "";
 }
-const observer = new ResizeObserver(() => {
+function resizeCanvas() {
   const size = Math.max(
     1,
     Math.round(
@@ -58,7 +58,8 @@ const observer = new ResizeObserver(() => {
     canvas.width = canvas.height = size;
     draw();
   }
-});
+}
+const observer = new ResizeObserver(resizeCanvas);
 observer.observe(canvas);
 document.querySelector("#new")!.addEventListener("click", () => {
   let seed = crypto.getRandomValues(new Uint32Array(1))[0];
@@ -133,4 +134,5 @@ document.querySelector("#close-link")!.addEventListener("click", () => {
   document.querySelector<HTMLButtonElement>("#share")!.focus();
 });
 sync();
+resizeCanvas();
 animation.start(motion.matches);
