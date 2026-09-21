@@ -1,0 +1,294 @@
+:root {
+  font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #554d43;
+  background: #f5f1e8;
+  font-synthesis: none;
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header {
+  margin: 0 5%;
+  height: 108px;
+  border-bottom: 1px solid #77664d24;
+}
+.wordmark {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  letter-spacing: -2.5px;
+  text-decoration: none;
+  color: #403c34;
+}
+.wordmark span {
+  font: 25px Georgia;
+  margin-left: 5px;
+  color: #a77762;
+  vertical-align: top;
+}
+.edition {
+  font-size: 10px;
+  letter-spacing: 2.3px;
+  color: #827969;
+}
+main {
+  width: min(680px, 90%);
+  margin: 0 auto;
+}
+figure {
+  margin: 0;
+}
+.canvas-wrap {
+  width: min(100%, calc(100svh - 290px));
+  min-width: 280px;
+  margin: 0 auto;
+}
+canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+}
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 27px;
+  font-size: 11px;
+}
+.specimen {
+  letter-spacing: 1.6px;
+  font-size: 9px;
+  color: #887c6b;
+}
+#number {
+  color: #5c544b;
+}
+.caption {
+  color: #817465;
+  font-size: 11px;
+}
+.controls {
+  border-top: 1px solid #77664d2b;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+legend {
+  float: left;
+  margin-right: 13px;
+  font-size: 11px;
+  color: #796f61;
+}
+.swatch {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.swatch input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.swatch span {
+  display: block;
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: #c58a83;
+}
+.swatch.iris span {
+  background: #9d95b7;
+}
+.swatch.meadow span {
+  background: #9da88c;
+}
+.swatch input:checked + span {
+  outline: 1px solid #756754;
+  outline-offset: 4px;
+}
+.swatch input:focus-visible + span {
+  outline: 2px solid #443c30;
+  outline-offset: 5px;
+}
+button {
+  border: 0;
+  background: transparent;
+  color: #655b4e;
+  min-height: 44px;
+  padding: 10px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+button span {
+  font-size: 18px;
+  margin-right: 6px;
+}
+.primary {
+  background: #514e40;
+  color: #fffaf0;
+  border-radius: 3px;
+  padding: 10px 22px;
+  font-size: 12px;
+}
+.primary:hover {
+  background: #6c6957;
+}
+.secondary {
+  display: flex;
+  gap: 9px;
+}
+.secondary button:hover {
+  background: #eae4d8;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #8b6356;
+  outline-offset: 5px;
+}
+#status {
+  min-height: 18px;
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 11px;
+  color: #716b5b;
+}
+footer {
+  margin: 32px 5% 0;
+  padding: 22px 0;
+  border-top: 1px solid #77664d24;
+  font-size: 10px;
+  color: #8a8173;
+}
+footer span:last-child {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+#link-box {
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid #c9bfac;
+  font-size: 12px;
+}
+#link-box label {
+  display: block;
+  margin-bottom: 9px;
+}
+#share-url {
+  background: #fffcf5;
+  border: 1px solid #b9ad98;
+  padding: 10px;
+  width: 80%;
+  color: #554d43;
+}
+::selection {
+  background: #e6c8bd;
+}
+@media (min-width: 1500px) {
+  header {
+    height: 120px;
+  }
+  .canvas-wrap {
+    max-width: 680px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    height: 84px;
+    margin: 0 6%;
+  }
+  .wordmark {
+    font-size: 36px;
+  }
+  .edition {
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+  main {
+    width: 88%;
+  }
+  .canvas-wrap {
+    width: 100%;
+    min-width: 0;
+    margin: 26px auto 12px;
+  }
+  figcaption {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .specimen {
+    font-size: 8px;
+    letter-spacing: 0.7px;
+  }
+  .caption {
+    font-size: 10px;
+  }
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding-top: 20px;
+  }
+  .primary {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 10px 17px;
+  }
+  .secondary {
+    grid-column: 1/-1;
+    justify-content: center;
+  }
+  footer {
+    margin: 28px 6% 0;
+    gap: 24px;
+    font-size: 9px;
+  }
+  footer span:last-child {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  legend {
+    margin-right: 7px;
+  }
+  .swatch {
+    width: 30px;
+    height: 34px;
+  }
+  .swatch span {
+    inset: 7px 5px;
+  }
+}
